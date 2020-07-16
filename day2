@@ -1,0 +1,332 @@
+'''
+
+                            Online Python Interpreter.
+                Code, Compile, Run and Debug python program online.
+Write your code in this editor and press "Run" button to execute it.
+
+'''
+
+'''print("Hello World")
+a=123
+b=255
+print(a)
+print(type(a))
+print(id(a))
+print(id(b))
+
+val = int(input('Enter the value: '))
+print(val)
+print(type(val)) '''
+
+
+'''val1=int(input())
+val2=float(input())
+val3=input()
+
+print(val1, end='\t')
+print(val2)
+print(val3)'''
+
+'''
+###list
+mylst = [] #Empty list
+mylst = [12,34,56,78,90]
+print(mylst)
+
+
+name_lst = ['aa', 'bb', 'cc', 'dd']
+print(name_lst)
+
+combi_lst = [10, 10.56, 'prash', 1+2j]
+print(combi_lst)  '''
+
+'''
+####Indexing and slicing
+mylst = [] #Empty list
+mylst = [12,34,56,78,90]
+print(mylst[1])   # positive Indexing
+
+mylst = [] #Empty list
+mylst = [12,34,56,78,90]
+print(mylst[-1])   # -ve Indexing
+
+#[ start : stop_beofre :step]
+mylst = [] #Empty list
+mylst = [12,34,56,78,90]
+print(mylst[1:4:1]) 
+
+'''
+'''
+mylst = [] #Empty list
+mylst = [1,32, 3, 4, 5, 6, 7, 8, 9, 10]
+print(mylst[0:10:1]) 
+print(mylst[0:10:2]) 
+
+
+
+
+mylst = [] #Empty list
+mylst = [1,32, 3, 4, 5, 6, 7, 8, 9, 10]
+mylst[5]=100   #  list is mutable
+
+print(mylst)'''
+
+'''
+#Methods
+
+# 1 Append     Always adds in the end
+mylst = [] #Empty list
+mylst = [12,34,56,78,90]
+mylst.append(1234)
+print(mylst)
+
+mylst.append(int(input()))
+print(mylst)
+
+#2 Clear   list will be there but the data inside list will get Clear, it will be empy list
+mylst.Clear()
+# Copy
+newlist = mylst.copy()
+newlist[3]='data'
+print(mylst)
+print(newlist)
+
+print(id(mylst))
+print(id(newlist))'''
+
+
+'''
+#Extend
+mylst = [12,34,56,78,90]
+newlist= [22, 33, 44]
+
+mylst.append(newlist)
+print(mylst)
+
+mylst = [12,34,56,78,90]
+newlist= [22, 33, 44]
+mylst.extend(newlist)
+print(mylst)
+
+# Indexing
+mylst = [12,34,56,78,90]
+mylst.Index(34)
+
+
+#pop
+mylst = [12,34,56,78,90]
+print(mylst)
+mylst.pop(2)
+print(mylst)
+
+
+#Remove
+mylst = [12,34,56,78,90]
+print(mylst)
+mylst.Remove(34)
+print(mylst)
+
+#Insert
+mylst = [12,34,56,78,90]
+print(mylst)
+mylst.insert(3, 4545)
+print(mylst)
+
+#sort
+mylst = [12,50,30,12,41]
+print(mylst)
+mylst.sort()  #ascending oder
+print(mylst)
+
+print(mylst)
+mylst.sort(reverse=True)  #Descending oder
+print(mylst)
+
+#String
+name_lst = ['sachin', 'prashant', 'Alan', 'Dan']
+print(name_lst)
+name_lst.sort()  #ascending oder
+print(name_lst)
+
+print(name_lst)
+name_lst.sort(reverse=True)  #Descending oder
+print(name_lst)
+
+#Combination of data
+Combi_list = [123, 'Edison', 23.45, 'jordan']
+print(Combi_list)
+Combi_list.sort()  #it wont sort    string and number is not possible, but possible for float and int
+print(Combi_list)
+
+
+# Delete
+mylst = [12,50,30,12,41]
+del mylst[3]
+print(mylst)
+
+del mylst
+print(mylst) # which gives error
+
+# reverse
+mylst = [12,50,30,12,41]
+mylst.reverse()
+print(mylst)
+
+#Count
+mylst = [12,50,30,121,41, 121,223, 534, 121, 343]
+print(mylst.Count(121))
+
+'''
+
+'''=================================================================================================
+Functions
+
+1. min
+2. max
+3. sum
+4. len
+5. sorted
+
+Print(min(mylst))
+Print(max(mylst))
+Print(sum(mylst))
+Print(len(mylst))
+Print(sorted(mylst))
+
+===================================================================================================
+
+# nested list
+
+mylst [1, 2, 3, 4 [67, 89, 90], 5, 6, 7]
+print(mylst[4])
+
+print(mylst[4][1])
+print(mylst[4][-2])
+
+
+========================================
+mytup = ()  # Empty tuple
+
+mytup = (12, 34, 56, 80, 90)
+print(mytup)
+
+
+# Indexing and slicing 
+mytup = (12, 34, 56, 80, 90)
+print(mytup[2])
+
+mytup = (12, 34, 56, 80, 90)
+print(mytup[-3])
+
+mytup = (12, 34, 56, 80, 90)
+print(mytup[3:5])  # slicing
+
+mytup = (12, 34, 56, 80, 90)
+mytup[3] = 45   # this is not possible
+
+mytup = (12, 34, 56, 80, 90)
+del mytup[3]  # not possible
+
+del mytup()  # possible
+print(mytup)
+
+mytup = (12, 34, 96, 80, 90)
+print(mytup[::-1])
+
+# Methods
+
+
+# Indexing
+print(mytup.index(56))
+
+#Count
+mytup = (12, 34, 90, 80, 90)
+print(mytup.count(90))   # how many times value come
+
+============================================
+#Same functions
+
+mytup = (12, 43, 11, 89, 22)
+mylst = sorted(mytup)
+print(mytup)
+print(mylst)
+
+# tuple are immutable
+# List can be immutable
+
+===================================================
+
+
+
+set
+
+#unordered colletion of data, it doesnt allow duplication
+#it doesnt support indexing and slicing, it is not possible in SET
+
+
+
+myset = { 234, 4564, 344, 545, 74564}
+print(myset)
+
+# Methods
+
+#Add
+print(myset)
+myset.add(223423)   # it will add in the SET
+print(myset)
+
+# remove
+print(myset)
+myset.remove(234)   # this will remove particular value from SET 
+print(myset) 
+
+
+#discard
+myset.remove(23234234234)   # thowrs error when value is not there and remove that value
+myset.discard(23400)  #  it will remove if value is there, if not then it will NOT throw error.
+
+
+#pop
+myset.pop()   # it will pop the first value
+
+# clear
+myset.clear()
+
+===========================================================================
+#Functions
+
+sci_grp = {'Phy', 'Chem', 'Math', 'CS'}
+art_grp = {'Econo', 'Acc', 'Comm', 'CS'}
+
+print(sci_grp.union(art_grp))  # prints all even common
+Print(sci_grp.intersection(art_grp))  #  prints only common
+print(sci_grp.difference(art_grp)) # prints which is not there in the art group and discard common
+Print(sci_grp.symmetric_difference(art_grp)) # it will take values from both and discarding common values and prints
+
+===============================================================================
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
