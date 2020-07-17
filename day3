@@ -326,12 +326,27 @@ for i in range(2, int(n**0.5)+1):        # start at 2 and end till square root o
 #        
 -------------------------------------------
 
+# while
+
+#syntax
+
+Intitialization
+while condition
+    statement 1 
+    Post expression   # keep on change the value here, it will reaches to the condition and it will stop
+    
+
+
 i=0 
 while i < 10:
     print(i)
     i+=1 
     
   print(i)
+  
+-------------------------------------------  
+
+
   
 -------------------------------------------  
 
