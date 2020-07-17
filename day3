@@ -1,0 +1,361 @@
+'''
+
+                            Online Python Debugger.
+                Code, Run and Debug Python program online.
+Write your code in this editor and press "Debug" button to debug program.
+
+'''
+
+print("Hello World")
+
+# Dictionaty
+
+'''{key:value} pair
+
+mydict = {} # Empty dictionary
+
+
+mylst = []
+mytup = ()
+myset = set()
+
+
+mydict = {} # Empty dictionary
+emp_info = {'Name':'Prash', 'ID':57643, 'salary':10000.00}
+
+# value can be any type of data here, purely based on the requirement
+
+print(emp_info)
+
+print(emp_info['ID'])   # any value can be accesed with KEY
+
+# dictionary is mutable
+
+emp_info['name'] = 'Shah'   # Modifying information here with help of KEY, initialize a value here
+
+print(emp_info)
+
+# I want to create new key value pair
+
+emp_info['Dept']='Training'  # creating new key value pair
+print(emp_info)
+'''
+
+'''
+# Methods in dictionary
+
+emp_info = {'Name':'Prash', 'ID':57643, 'salary':10000.00}
+
+print(emp_info['DOB'])   # if you are accessing the KEY is not there then it will throw error 
+print(emp_info)
+
+# you can not change the KEY, KEy is fixed always
+
+#  Get 
+print(emp_info.get('DOB')) 
+
+print(emp_info.get('DOB','Key is not avaialble')) 
+
+print(emp_info.get('ID','Key is not avaialble')) # If present then get the the value
+
+'''
+'''----------------------------------------'''
+# Pop 
+
+# Removes the value and returns it back, pop the value , will help me to remove a pericular KEY-Value pair
+# I ve to give the KEY 
+
+'''
+emp_info = {'Name':'Prash', 'ID':57643, 'salary':10000.00}
+print(emp_info.pop('salary'))
+print(emp_info)
+
+# Popitem
+
+# removes values from the last, with KEY and Value pair, it will always go and remove the last KEY-Value
+
+print(emp_info.popitem())
+print(emp_info)
+
+# Keys 
+
+print(emp_info.keys())
+
+'''
+
+'''
+# values
+emp_info = {'Name':'Prash', 'ID':57643, 'salary':10000.00}
+print(emp_info.values())
+print(emp_info)
+
+
+# Items     key value pais will be shown in tuple, every pair of a KEY-Value pair is internally stored as a TUPLE pair, 
+#every pair is a tuple here,  every Key-pair comes out with a separate tuple
+
+print(emp_info.items())
+
+
+
+# Update   can add more than one Key value pairs
+
+'''
+
+'''emp_info.update({'Dept':'testing','Phone':9890112233})'''
+'''
+print(emp_info)
+
+#or
+
+add_info = {'Dept':'testing','Phone':9890112233}
+emp_info.update(add_info)
+print(emp_info)
+
+'''
+========================================================================
+
+# Split and join  are the 2 methods for basestring, it will works on STRING not on other data type
+
+# Split =  One single lines string in to words
+
+'''
+info = "This is python class"
+mylst = info.Split()   '''# how you are separating   Ex: with SPACE,   default it take SPACE   , apfter split the date get splitted and stored in side a list'''
+'''
+print(mylst)
+
+
+# split word by word by comma
+info = 'This,is,python,class'
+mylst = info.Split(',')
+print(mylst)
+
+info = 'This123is123python123class'
+mylst = info.Split('123')
+print(mylst)
+
+# join
+
+myinfo  = ['This',  'is', 'Python', 'class']
+
+info = ' '.join(mylst) # here every word is concatenated by space , word by word
+print(info)
+
+info = '#'.join(mylst) # here every word is concatenated by space , word by word
+print(info)
+
+'''
+'''========================================================= '''
+
+
+Contraol Statements
+
+    if   # tab space
+    else
+    elif   =   is equivalent to else if
+    nested if  (If with if)
+    
+    =================================
+    
+    
+    indentaion   that is TAB,  there is no parenthesis
+    syntax
+    
+    if condition: 
+        statement 1   # this is within the loop
+        statement 2   # this is within the loop
+    other Statements # this is not in the loop if   
+    other Statements # this is not in the loop if   
+    
+    ==================================
+    
+    if condition:
+        Statement 1 
+        Statement 2 
+    else:
+        Statement 1
+        Statement 2
+    other Statements
+    other Statements
+    
+    ========================================
+    if condition:
+        Statement 1 
+        Statement 2
+    elif condition:
+        Statement 1 
+        Statement 2
+    else:
+        Statement 1 
+        Statement 2
+    other Statements
+    other Statements
+    
+========================================================
+
+
+val1  = int(input())
+val2  = int(input())
+
+if val1 > val2:
+    print(val1, 'is greater')
+else:
+    print(val2, 'is greater')
+    
+==========================================================
+
+#Logical Operator
+
+ and
+ or 
+ not
+ 
+val1  = int(input())
+val2  = int(input())
+val3  = int(input())
+
+
+if val1 > val2 and val1 > val3:
+    print(val1, 'is greater')
+elif val2 > val3:
+    print(val2, 'is greater')
+else:
+    print(val3, 'is greater')
+    
+    
+==========================================================
+
+
+name = input('Enter name')
+age = int(input('Enter age'))
+
+if name = 'Prashant' and age >=18:
+    print(name, 'you are eligible for voting')
+else
+    print('Not eligible')
+
+=========================================================
+
+
+name = input('Enter name')
+age = int(input('Enter age'))
+
+if name = 'Prashant' and age >=18:
+    print(name, 'you are eligible for voting')
+elif age >=18
+    print('you are eiligible for voting')
+else:
+    print('Not eligible')
+========================================================
+
+
+# there is no SWITCH case in the python
+
+
+========================================================
+
+#Loop
+
+for
+while
+
+syntax
+
+for val in range(start, stop_before, step)
+    Statement 1
+    Statement 2
+    Statement 3
+other Statements
+
+
+    for i in range(0, 10, 1):
+        print(1)
+        
+        print(i,end=' ')  # if value dont want to print on next line
+        
+    -------------------------------------
+    for i in range(10):
+        print(i.end=' ')
+        
+    -------------------------------------
+    for i in range(0, 10, 2):
+         print(i.end=' ')
+    -------------------------------------
+    name = 'Prashant shahapure'    # Iterating through STRING
+    for val in name:
+        print(val)
+    --------------------------------------
+    mylst = [12, 23,34, 45, 56]    # Iterating through list
+        for val in mylst:
+        print(val)
+-------------------------------------------
+    
+mylst = []
+n = int(input('Enter N:'))
+
+for i in range(n):
+    mylst.append(int(input()))
+    
+    print(mylst)
+    
+-------------------------------------------
+
+# Break and Continue statement in FOR Loop
+
+for i in range(10):
+    if i == 5:
+        Continue
+    print(i)    
+    
+-------------------------------------------
+for i in range(10):
+    if i == 5:
+        Break
+    print(i)    
+-------------------------------------------
+
+# prime numner logic,  prime number is nly divisible with only that number ex: 17, 23
+
+n = int(input('Enter n:'))
+
+for i in range(2, int(n**0.5)+1):        # start at 2 and end till square root of n
+    if n\i ==0
+        print(n, 'is not a prime number')
+    else:
+        print(n, 'is a prime number')
+#        
+-------------------------------------------
+
+i=0 
+while i < 10:
+    print(i)
+    i+=1 
+    
+  print(i)
+  
+-------------------------------------------  
+
+
+
+
+
+    
+    
+
+
+
+
+
+
+
+
+
+
+
+    
+        
+
+
+
+
+
