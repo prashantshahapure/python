@@ -1,0 +1,309 @@
+'''
+
+                            Online Python Debugger.
+                Code, Run and Debug Python program online.
+Write your code in this editor and press "Debug" button to debug program.
+
+'''
+
+print("Hello World")
+
+'''
+# zip  function
+# zip function helps with loop within a loop
+
+mylst1 = [1, 2, 3, 4]
+mylst2 = [5, 6, 7, 8]
+
+mylst3 = []     # i want like this [6, 8, 10, 12]
+
+mypack = list(zip(mylst1, mylst2))  
+# (this zip will do is first value from 1st object and 1st value of 2nd object and so on, i.e. 1, 5 will be packed as a tuple)
+# (1, 5), (2, 6), (3, 7), (4, 8)
+# we can zip more than 2 objects
+# tuple is immutable,  I want my data t be secure
+# if values are different then it will pair if there is a value then only it will show otherwose it wont take
+
+print(mypack) # try this it will ask id 
+
+for val1, val2 in zip(mylst1, mylst2):    # val1==1, val2 ==5
+    mylst3.append(val1+val2)  # 1+5  = 6   , same for next 2+6=8 
+    
+print(mylst3)    
+'''
+
+'''===================================================================================='''
+
+
+'''
+keys = ('Name', 'ID', 'Salary')
+values = ['Prash', 1234, 9000.00]
+
+# if I want to store as key value pair, use Zip function
+
+myemp= {}   # empty dictionary
+
+for k,v in zip(keys, values):    # Name: Prash,  Id: 1234, salary:9000.00  
+        myemp[k] = v      # dictionary indexing and assigning values
+
+print(myemp)
+'''
+'''========================================================================================='''
+
+# make it more simple
+'''
+keys = ('Name', 'ID', 'Salary')
+values = ['Prash', 1234, 9000.00]
+
+# if I want to store as key value pair, use Zip function
+
+myemp= dict(zip(keys, values))   # empty dictionary typecast without for loop
+print(myemp)
+'''
+'''========================================================================================='''
+
+
+# Comprehension
+# 3 types
+# 1. List Comprehension
+# 2. Set Comprehension
+# 3. Dictionary Comprehension
+
+
+#Comprehension is compress the lines of code and make it shorter
+
+### List Comprehension
+'''
+mylst = [1, 2, 3, 4] 
+# job is to do square all the values which is present inside the list    
+sqrlst = []
+
+for i in mylst:
+    sqrlst.append(i**2) 
+print(sqrlst)
+'''
+
+'''
+# same optimise this with List Comprehension
+# example 1
+mylst = [1, 2, 3, 4] 
+sqrlst = [ i**2 for i in mylst ]  # [1, 4, 9, 16]
+print(sqrlst)
+'''
+
+'''
+# example 2
+## I want to tak EVEN values
+
+myeven = []
+for i in range(11):
+    if i % 2 == 0:
+        myeven.append(i)
+print(myeven)
+
+
+myeven = [i for i in range(11) if i % 2 == 0]  # (0,2,4,6,8,10)
+print(myeven)
+'''
+
+
+#Example3
+# Nested List comprehension, List comprehension in another List comprehension
+
+'''
+mylst = [1,2,3,4]
+sqrlst = [i**2 for i in mylst]  # (1, 4, 9, 16)
+
+cubelst = [i**3 for i in sqrlst] # (1, 64, 729, 4096)
+print(cubelst)
+
+# now optimise it more with the help of nested List comprehension
+
+mylst = [1,2,3,4]
+cubelst = [i**3 for i in [i**2 for i in mylst]] # (1, 64, 729, 4096)
+print(cubelst)
+
+'''
+'''====================================================================================='''
+
+# conditinal statements (we dont have direct have a conditional statements in python, but indirect one)
+
+
+#in C 
+# var = condition ? true statement : false statement
+
+#in python
+# var = true statement if condition else false statement
+# Example 
+'''
+a = 10
+b = 20
+res = a if a >b else b
+print(res)
+'''
+# Example
+# take range of values, even value then square and value is ODD then cube 
+# range 0 to 10
+'''
+sqreven_cubeodd = [ i**2 if i % 2 ==0 else i**3 for i in range(11)]
+print(sqreven_cubeodd)
+
+'''
+
+'''============================================================================================================='''
+
+
+# set comprehension
+'''
+myset = {1, 2, 3, 4}
+sqrset = { i**2 for i in myset }  # [1, 4, 9, 16]
+print(sqrset)
+'''
+
+'''============================================================================================================='''
+
+
+# Dictionary comprehension
+
+'''
+subs = ('phy', 'Chem', 'Math')
+marks = (160, 180, 190)
+
+sub_marks = dict(zip(subs, marks))
+print(sub_marks)
+
+
+# More optimization with sub_percentagewise
+subs = ('phy', 'Chem', 'Math')
+marks = (160, 180, 190)
+
+sub_percentage = { k:v/2 for k, v in zip(subs, marks)}  # k == Phy and v == 160 on first iteration
+                    # sub and marks coupled as a tuple   phy:160, Checm: 180, Math:190
+        
+      #  k =phy :  and v=160 i.e 160 /2  = 80 
+      #  k =Chem :  and v=180 i.e 160 /2  = 90 
+      #  k =Math :  and v=190 i.e 160 /2  = 95  
+print(sub_marks)
+'''
+'''========================================================================================================'''
+
+# print
+'''
+a =10
+b =12.34 
+c = 'X'
+d = 'Prash'
+
+print(a, b,c, d)
+print('A:' ,a, 'B:' ,b, 'C:' ,c, 'D:' ,d )
+print('A: {} B: {} C: {} D: {}'.format(a, b, c, d))
+print('A: {0} B: {1} C: {2} D: {3}'.format(a, b, c, d))
+print('C: {2}  B: {1} D: {3} A: {0}'.format(a, b, c, d))
+print('A: %d  B: %f C: %c D: %s' %(a,b,c,d))
+print('A: %d  B: %g C: %c D: %s' %(a,b,c,d))
+
+print(f'A:{a}  B:{b}  C:{c}  D:{d}')  # giving error
+
+'''
+
+#Format Specifier
+
+# int   %d 
+# float  %f  or %g 
+# char  %c 
+# string  %s
+
+'''===================================================================================================================='''
+'''===================================================================================================================='''
+
+# function
+
+
+# is a part of a program, if repeating statemetns then put those in a function
+
+# repeatations can be handles with function, and we can call it
+# it helps you avoid in repeatations, it helps you in easy debugging, it gives clear image whats happening inside function 
+
+
+'''
+def sumof2numbers():
+    var1 = int(input())
+    var2 = int(input())
+    res = var1+var2
+    print(res)
+  
+sumof2numbers()   
+'''
+
+    
+# passing argumetns to a function
+'''
+def sumof2numbers(a,b):     # a and b are parameters
+    res = a + b
+    print(res)
+  
+var1 = int(input())
+var2 = int(input())  
+sumof2numbers(var1, var2)  # var1 and var2 are arguments, you are passing these then you need to have placeholders to these   
+'''
+
+
+# passing argumetns to a function and return a value
+'''
+def sumof2numbers(a,b):     # a and b are parameters
+    res = a + b
+    return res    # returning to the function where the function has been called
+
+var1 = int(input())
+var2 = int(input())  
+print(sumof2numbers(var1, var2))
+
+'''
+
+'''
+# More precisley
+def sumof2numbers(a,b):     # a and b are parameters
+    return a + b
+    
+var1 = int(input())
+var2 = int(input())  
+print(sumof2numbers(var1, var2))
+'''
+
+'''
+# how to return more than one value, it is possible in python , then values will be packes as tuple
+def arith(a,b):
+    add = a+b 
+    sub = a-b 
+    mul = a*b 
+    
+    return add, sub, mul   # if returning more than one value then it is retirning as a tuple , a pack of values
+    
+var1 =   int(input())
+var2 =   int(input())
+print(arith(var1, var2))
+'''   
+'''
+# passing more than one value to a function
+
+def fun(*args):     # *args is not a keyword, we are just using it as a variable name, PACKING the values as tuple.
+    #print(type(args))
+    print(sum(args))
+
+fun(1,2,3,4,5,6,7,8,9,10)   # here passing more than one value to a function
+    # if I m passing one than one value but I dont want to have more paramenters then use *args
+'''
+
+
+
+def emp_info(**karg):   # pack the keyword arguments as Dictionary
+    print(karg)
+
+
+emp_info(name='Prash', ID=123, Sal=9000.00)   # here packed value as TUPLE 
+    
+
+
+
+
+
