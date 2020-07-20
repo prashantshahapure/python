@@ -1,0 +1,129 @@
+'''
+
+                            Online Python Debugger.
+                Code, Run and Debug Python program online.
+Write your code in this editor and press "Debug" button to debug program.
+
+'''
+'''
+print("Hello World")
+
+def arith(a,b):
+    add = a+b
+    sub = a-b
+    mul = a*b
+    
+    return add, sub, mul
+    
+var1 = int(input())
+var2 = int(input())
+    
+sum_,diff,prod = arith(var1, var2)
+print(sum_, diff, prod)
+'''    
+'''-----------------------------------------------'''
+'''
+def func(*args,**kwarg):
+    print(args)
+    print(kwarg)
+
+func(1, 2, 3, 4, 5, name='Prash', Id=123, sal=9000.00)  (**kwarg represents the "key and value" pair so it will assign to kwarg)
+'''
+'''---------------------------------------------------'''
+
+'''
+# file inside a file
+# VS code
+
+# Arithmatic
+
+def add(a, b):
+    return a+b
+    
+def sub(a, b):
+    return a-b
+    
+def mul(a, b):
+    return a*b
+    
+def div(a, b):
+    return a/b
+
+val1 = int(input('Enter value 1: '))
+val2 = int(input('Enter value 2: '))
+
+print(add(val1, val2))
+print(sub(val1, val2))
+print(mul(val1, val2))
+print(div(val1, val2))
+
+'''
+'''---------------------------------------------------'''
+
+#Calculate this is a new file
+
+'''
+import arithmatic    ## this meand any other file name which has Arithmatic as a name will imported here. i.e. code 
+
+
+print(__name__)   ## dunder Main   is holding current running module name
+
+var1 = int(input('Enter value 1: '))
+choice = input('Enter your choice')
+var2 = int(input('Enter value 2: '))
+
+if choice == '+':
+    #print(add(var1, var2)) # this will give as error, you have to explicitely write the module name/ file name to access====='''
+'''
+    print(arithmatic.add(var1, var2))
+
+if choice == '-':
+    print(arithmatic.sub(var1, var2))
+
+if choice == '*':
+    print(arithmatic.mul(var1, var2))
+
+if choice == '/':
+    print(arithmatic.div(var1, var2))
+'''
+
+'''===================================================================='''
+
+#MAP   object
+
+'''
+mylst = [1, 2, 3, 4, 5]
+print(list(map(lambda n : n**2 , mylst)))
+
+'''
+'''================================='''
+
+'''
+def even(n):
+    if n%2 == 0:   # if condition false then it will retun None,  here user FILTER # Filter  only saved TRUE values, it will ignore false values
+        return n
+   
+     return n%2 == 0'
+       
+    
+'''    
+
+ ''' mylst = [1, 2, 3, 4, 5] '''
+'''   print(list(map(even, mylst)))    '''
+'''
+# Filter    helps me in filgering the process and get the returnuired output
+# Filter  only saved TRUE values, it will ignore false values
+
+#using lambda
+print(list(filter(lambda n : n%2 == 0, mylst)))
+
+'''
+'''===================================================='''
+
+
+# reduce
+
+# it will provide only one value at last
+
+
+
