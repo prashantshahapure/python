@@ -1,0 +1,267 @@
+'''
+
+                            Online Python Debugger.
+                Code, Run and Debug Python program online.
+Write your code in this editor and press "Debug" button to debug program.
+
+'''
+
+print("Hello World")
+
+'''
+
+fileobject = open ('File name', 'Mode')
+# mode: R- Read, W- Write, A-Append
+# file name is any type:- JPEG file, text file
+
+#when you open a file, make sure you are closing the file
+
+fileobject.close()
+
+Writw/Read Functions
+
+Write(string) # Any sentence, paragraph
+Writeline(list) # List   []  [ , '', ]
+
+
+
+read() - reads the entire content from the file
+read(n) - reads n no of chars from the file
+readline() - reads characters from the file till it encounters a (\n) new line
+readlines() - reads the entire content from the file and puts it in a List
+
+
+# Modes
+
+r - Open file in read Mode :- It open already existing file only, if file doesnt exists then it will throw error. (Run time error)
+    
+w - Creates a new file, if creating already existing file then it will replace existing file and create new file
+
+a - If the file doesnt exists then it will create a new file, 
+    if the file already exists then it will open the file for writting at the end of the file, start appending at the end
+'''
+
+'''-------------------------------------------------------'''
+
+'''
+f_obj = open('Sample.txt', 'w')    # here also the Entire path can be given also
+content = input()
+f_obj.write(content)
+f_obj.close()
+'''
+
+'''
+f_obj = open('Sample.txt', 'w')    # here also the Entire path can be given also
+
+for i in range(3):
+    content = input()
+    f_obj.write(content)
+    f_obj.write('\n')
+
+
+f_obj.close()
+'''
+
+'''
+f_obj = open('info.txt', 'w') 
+mylst = ['This is new line1', 'This is line 2', 'This is line 3\n']
+f_obj.writelines(mylst)
+
+f_obj.close()
+'''
+
+
+'''====================================================='''
+
+Read the file
+
+'''
+f_obj = open('Sample.txt', 'r') 
+
+content = f_obj.read(10)  # first 10 chars
+print(content)
+f_obj.close()
+''''
+
+
+'''
+f_obj = open('Sample.txt', 'r') 
+
+content = f_obj.readlines()  # read single line
+print(content)
+f_obj.close()
+''''
+
+
+'''
+f_obj = open('Sample.txt', 'r') 
+mylst = f_obj.readlines()  # entire content of file and stored in list, and print that LIST
+print(mylst)
+f_obj.close()
+''''
+
+
+'''====================================================='''
+
+# how to move your cursor and then start readin in a file
+# by default cursor is at the starting position.
+
+#seek method
+
+seek(offset,whence)  #  whence=where   Offset= How many bites I ve to move
+
+# whence = 0, 1, 2
+
+0 = from the beggining   # offset value must be +ve
+1= from the current position  # offset value changes  (can +ve or -ve)
+2= from the end 	# offset value must be -ve
+
+
+
+'''
+f_obj = open('Sample.txt', 'r') 
+f_obj.seek(10,0)   # start reading from the 11th position
+mylst = f_obj.readlines()  # entire content of file and stored in list, and print that LIST
+print(mylst)
+f_obj.close()
+''''
+
+'''
+# if file forget to close , Context manager help to close the file
+
+with open ('Sample.txt','r') as f_obj
+
+r+
+w+
+a+
+
+
+rb = read binary
+
+wb = write binary
+
+ab =
+
+rb+
+wb+
+ab+
+
+'''
+
+
+with open ('Sample.txt', 'r+') as f_obj
+
+
+'''======================================================================='''
+
+# Exception Handling
+
+you have to give double slash in Windows   when opening file     'C:\\Document\\folder\\filename'   ==WINDOWS
+							'/user/Document/Folder/filename  == Linux machntosh
+
+
+
+Exception:- Error happening during runtime
+
+
+Syntax error = is not a exception
+
+
+try
+	pass
+except:
+	pass
+else
+	pass
+finally:
+	pass
+
+
+try: Code that may throu error
+except: if there is any exception
+else: if there is no exception
+finally:- always executed
+
+
+def devision(m, n):
+	res = m/n   # exception happend this line   if devide by zero
+	print(res)
+
+val1 =int(input())
+val2 =int(input())
+
+devision(val1/val2)
+val1= 10
+val2=0
+
+it will throw exception
+Zero devision error
+
+
+
+'''
+def devision(m, n):
+	try:
+		res = m/n   # exception happend this line   if devide by zero
+	except ZeroDevisionError as E:   # if you knwo what exactly the exception
+	except Exception as E:		# if you dont the exception
+		print(E)
+	else:
+		print(res)
+	finally:
+		print('Program ended...')
+
+val1 =int(input())
+val2 =int(input())
+
+devision(val1/val2)
+'''
+
+
+# How to handle the exception
+
+'''
+def devision(m, n):
+	while true:
+	try:
+		res = m/n   # exception happend this line   if devide by zero
+	
+	except Exception as E:		# if you dont the exception
+		print(E)
+		n = int(input('Enter a non zero value'))
+	else:
+		print(res)
+		break      # you can use break, or continue when you are suing loop provided a condition
+	finally:
+		print('Program ended...')
+
+val1 =int(input())
+val2 =int(input())
+
+devision(val1/val2)
+'''
+
+
+
+First Class function
+closure
+Decorator
+Generator
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
